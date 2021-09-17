@@ -19,7 +19,7 @@ while True:
     #accept returns the open connection along with the ip address of the client
     connection, client_address = sock.accept()
     try:
-        print >>sys.stderr, 'connection from', client_address
+        print(sys.stderr, 'connection from', client_address)
         # Receive the data in small chunks and send it back to client
         while True:
             data = connection.recv(16)

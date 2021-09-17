@@ -9,10 +9,16 @@ serverAddress = ("129.21.87.219", 10001)
 print(sys.stderr, 'connecting to %s port %s' % serverAddress)
 sock.connect(serverAddress)
 
+#turn string into bytes by encoding or else it will pop an error saying it expected bytes
+newstr = "This is the string but it will be repeated back to me"
+newstr_bytes = newstr.encode("ascii")
+print(newstr_bytes)
+
+
 try:
     
     #Send data with (sendall)
-    message = "Hello!"
+    message = newstr_bytes
     print(sys.stderr, 'sending "%s"' % message)
     sock.sendall(message)
 
