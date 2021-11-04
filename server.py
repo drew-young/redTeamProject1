@@ -5,7 +5,7 @@ import sys
 sock = socket.socket(socket.AF_INET6,socket.SOCK_STREAM)
 
 #Define the server address and port
-serverAddress = ("129.21.87.219", 10001)
+serverAddress = ("129.21.84.234", 10001)
 #bind associates the socket with an ip and prints out a statement
 print(sys.stderr, "starting up on %s port %s" % serverAddress)
 sock.bind(serverAddress)
